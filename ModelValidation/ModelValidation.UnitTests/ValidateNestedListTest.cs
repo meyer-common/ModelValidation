@@ -124,10 +124,6 @@ namespace Meyer.Common.ModelValidation.UnitTests
             Assert.AreEqual(response.Results[0].Message, "The  field is not a valid phone number.");
             Assert.AreEqual(response.Results[1].Message, "The  field is not a valid e-mail address.");
             Assert.AreEqual(response.Results[2].Message, "The  field is required.");
-
-            Assert.AreEqual(response.Results[0].Exception.Message, "The  field is not a valid phone number.");
-            Assert.AreEqual(response.Results[1].Exception.Message, "The  field is not a valid e-mail address.");
-            Assert.AreEqual(response.Results[2].Exception.Message, "The  field is required.");
         }
     }
 }

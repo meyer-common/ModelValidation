@@ -7,20 +7,17 @@ namespace Meyer.Common.ModelValidation
     /// </summary>
     public class FailedValidationResult
     {
+        private ValidationException exception;
+
         /// <summary>
         /// Gets the name of the property which failed
         /// </summary>
         public string Key { get; }
 
         /// <summary>
-        /// Gets the exception generated from validation
-        /// </summary>
-        public ValidationException Exception { get; }
-
-        /// <summary>
         /// Gets the ValidationException message
         /// </summary>
-        public string Message => this.Exception.Message;
+        public string Message => this.exception.Message;
 
         /// <summary>
         /// Instantiates a new instance of FailedResult
@@ -30,7 +27,7 @@ namespace Meyer.Common.ModelValidation
         public FailedValidationResult(string key, ValidationException e)
         {
             this.Key = key;
-            this.Exception = e;
+            this.exception = e;
         }
     }
 }
